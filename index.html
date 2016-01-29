@@ -13,8 +13,13 @@
 			color: white;
 			position: fixed;
 		  top: 40%; left: 50%;
-		  transform: translate(-50%, -50%);
+      transition: .1s all;
+	    transform: translate(-50%, -50%);
 		}
+    h1:hover, h1:focus {
+      cursor: pointer;
+      zoom: 110%;
+    }
 		@media only screen and (max-device-width: 480px) {
 			h1 { font-size: 2em; }
 		}
@@ -25,9 +30,11 @@
 	<audio autoplay="autoplay">
 		<source src="kutshit.m4a" type="audio/mpeg">
 	</audio>
-  <h1>FUCKINGKUTSHIT</h1>
+  <h1 onclick="audio.play()">FUCKINGKUTSHIT</h1>
 	<p class="hidden">KAKAKAKAKA</p>
   <script>
+  var audio = new Audio("kutshit.m4a" ) ;
+  audio.loop = false;
   (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
     function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
     e=o.createElement(i);r=o.getElementsByTagName(i)[0];
